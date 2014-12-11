@@ -11,5 +11,10 @@ describe 'homepage' do
 			visit '/'
 			expect(page).to have_link("Sign up")
 		end
+
+		it 'should have a sign in link' do
+			visit '/'
+			expect(page).to have_link("Sign in")
+		end
 	end
 end
