@@ -29,7 +29,7 @@ describe 'homepage' do
 			expect(page).to have_content 'Welcome! You have signed up successfully.'
 		end
 
-		it 'should display a successful sign up confirmation' do
+		it 'should display a sign out link' do
 			visit '/'
 			click_link 'Sign up'
 			fill_in 'Email', with: 'test@test.com'
