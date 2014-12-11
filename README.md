@@ -1,28 +1,9 @@
-== README
+##Caravan storage
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A website for my father's caravan storage business where you can signup, login and book times and slots for storing your caravan.
 
-Things you may want to cover:
+----------------------------------------------
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Using Rails
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
