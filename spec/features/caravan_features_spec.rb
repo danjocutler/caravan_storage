@@ -1,10 +1,15 @@
 require 'rails_helper'
 
 describe 'homepage' do
-	context 'new user opens page' do
+	context 'user opens page' do
 		it 'should display a welcome message' do
-			visit '/caravans'
-			expect(page).to have_content("Welcome to Cutler's Caravan Storage!" )
+			visit '/'
+			expect(page).to have_content("Welcome to Cutler's Caravan Storage!")
+		end
+
+		it 'should have a sign up link' do
+			visit '/'
+			expect(page).to have_link("Sign up")
 		end
 	end
 end
