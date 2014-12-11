@@ -17,4 +17,26 @@ describe 'homepage' do
 			expect(page).to have_link("Sign in")
 		end
 	end
+
+	context 'user signs up' do
+		it 'should display a successful sign up confirmation' do
+			visit '/'
+			click_link 'Sign up'
+			fill_in 'Email', with: 'test@test.com'
+			fill_in 'Password', with: 'testtest'
+			fill_in 'Password confirmation', with: 'testtest'
+			click_button 'Sign up'
+			expect(page).to have_content 'Welcome! You have signed up successfully.'
+		end
+
+		it 'should display a successful sign up confirmation' do
+			visit '/'
+			click_link 'Sign up'
+			fill_in 'Email', with: 'test@test.com'
+			fill_in 'Password', with: 'testtest'
+			fill_in 'Password confirmation', with: 'testtest'
+			click_button 'Sign up'
+			expect(page).to have_link 'Sign out'
+		end
+	end
 end
