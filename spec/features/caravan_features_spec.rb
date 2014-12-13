@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 describe 'homepage' do
+
 	context 'user opens page' do
 		it 'should display a welcome message' do
 			visit '/'
@@ -19,23 +20,21 @@ describe 'homepage' do
 	end
 
 	context 'user signs up' do
-		it 'should display a successful sign up confirmation' do
+			
+		before do
 			visit '/'
 			click_link 'Sign up'
 			fill_in 'Email', with: 'test@test.com'
 			fill_in 'Password', with: 'testtest'
 			fill_in 'Password confirmation', with: 'testtest'
 			click_button 'Sign up'
+		end
+		
+		it 'should display a successful sign up confirmation' do
 			expect(page).to have_content 'Welcome! You have signed up successfully.'
 		end
 
 		it 'should display a sign out link' do
-			visit '/'
-			click_link 'Sign up'
-			fill_in 'Email', with: 'test@test.com'
-			fill_in 'Password', with: 'testtest'
-			fill_in 'Password confirmation', with: 'testtest'
-			click_button 'Sign up'
 			expect(page).to have_link 'Sign out'
 		end
 	end
