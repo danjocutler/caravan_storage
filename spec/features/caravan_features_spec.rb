@@ -3,6 +3,7 @@ require 'rails_helper'
 describe 'homepage' do
 
 	context 'user opens page' do
+
 		it 'should display a welcome message' do
 			visit '/'
 			expect(page).to have_content("Welcome to Cutler's Caravan Storage!")
@@ -38,4 +39,6 @@ describe 'homepage' do
 			expect(page).to have_link 'Sign out'
 		end
 	end
+
+	
 end
